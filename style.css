@@ -1,0 +1,243 @@
+body {
+    font-family: arial;
+    background-attachment: fixed;
+    background-size: cover;
+    background: #2c3e50;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#video-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+.show-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: transparent;
+    color: #fff;
+    z-index: 10;
+    position: absolute;
+    top: 30%;
+    width: 98%;
+    padding: 0;
+    margin: 0 auto;
+    height: 60vh;
+    text-align: center;
+}
+
+
+
+h1 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 400;
+}
+
+h2 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.showAdvice {
+    display: inline-block;
+    position: relative;
+    font-size: 22px;
+    padding: 3px 40px;
+    background: transparent;
+    border: 1px solid #3498db;
+    color: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: .8s;
+}
+
+.showAdvice::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #fff;
+    transition: .5s;
+}
+
+.showAdvice:hover:before {
+    height: 100%;
+    z-index: -1;
+}
+
+.showAdvice:hover {
+    color: #3498db;
+    border: 1px solid #fff;
+}
+
+
+.numbers {
+    font-size: 14px;
+}
+
+
+form {
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alert {
+    width: 60%;
+    color: #fff;
+    padding: 10px 40px;
+    display: none;
+}
+
+textarea[name="quote"] {
+    width: 60%;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+input[name="author"] {
+    width: 60%;
+    padding: 14px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+label {
+    width: 60%;
+    font-size: 24px;
+    color: #fff;
+    padding: 10px;
+}
+
+.add {
+    width: 40%;
+    background: transparent;
+    padding: 8px 0;
+    font-size: 22px;
+    border: 1px solid #3498db;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: .5s;
+    position: relative;
+}
+
+.add::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #fff;
+    transition: .5s;
+}
+
+.add:hover:before {
+    height: 100%;
+    z-index: -1;
+}
+
+.add:hover {
+    border: 1px solid #fff;
+    color: #3498db;
+}
+
+
+@media (max-width: 900px) {
+    .quote-content h1 {
+        top: 15%;
+        font-size: 26px;
+    }
+
+    .quote-content h2 {
+        top: 55%;
+        font-size: 16px;
+    }
+}
+
+.cards {
+    margin: 16px 0;
+}
+
+.cards-buttons {
+    margin: 0;
+    padding-left: 0;
+    border-bottom: 1px solid #fff;
+}
+
+.cards-button {
+    display: inline-block;
+    line-height: 3;
+    position: relative;
+}
+
+.cards-button a {
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cards-button a:hover {
+    color: #3498db;
+}
+
+.cards-panels {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cards-panel {
+    display: none;
+}
+
+
+.cards-button.active a {
+    color: #3498db;
+}
+
+.cards-button.active a:hover {
+    cursor: default;
+    color: #3498db;
+}
+
+.cards-button.active a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #3498db;
+}
